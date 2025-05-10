@@ -20,7 +20,7 @@ namespace TP6_Grupo_8.Conexion
 
 
         public Productos() {
-            //clase por defecto
+            //constructor por defecto
         }
 
         public Productos(int idProductos, string nombreProducto, int idProvedor,

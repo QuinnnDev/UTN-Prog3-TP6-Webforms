@@ -38,5 +38,31 @@ namespace TP6_Grupo_8
 			}
 		}
 
-	}
+        public int EjecutarProcAlmacenado(string nombreProcedimiento, List<SqlParameter> parametros)
+        {
+			SqlConnection conexion = ObtenerConexion();
+            try
+            {
+                SqlCommand comando = new SqlCommand(nombreProcedimiento, conexion);
+                comando.CommandType = System.Data.CommandType.StoredProcedure;
+
+                if (parametros != null)
+                {
+                    foreach (var parametro in parametros)
+                    {
+                        comando.Parameters.Add(parametro);
+                    }
+                }
+
+                int filasAfectadas = comando.ExecuteNonQuery();
+                return filasAfectadas;
+            }
+            catch (Exception ex)
+            {
+                return -1;
+            }
+
+        }
+
+    }
 }

@@ -11,7 +11,7 @@ namespace TP6_Grupo_8
 {
 
 
-    public partial class paginaPrincipal
+    public partial class ejercicio1
     {
 
         /// <summary>
@@ -33,21 +33,12 @@ namespace TP6_Grupo_8
         protected global::System.Web.UI.WebControls.Label lblTitulo;
 
         /// <summary>
-        /// Control hyplEjercicio1.
+        /// Control GridView1.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink hyplEjercicio1;
-
-        /// <summary>
-        /// Control hyplEjercicio2.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink hyplEjercicio2;
+        protected global::System.Web.UI.WebControls.GridView GridView1;
     }
 }

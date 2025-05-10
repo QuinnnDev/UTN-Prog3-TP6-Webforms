@@ -10,8 +10,9 @@ namespace TP6_Grupo_8
 	{
 
 		string stringConexion = @"Data Source=localhost\sqlexpress;Initial Catalog = Neptuno; Integrated Security = True";
+		//string stringConexion = "Data Source=localhost\\SQLEXPRESS;Initial Catalog=Neptuno;Integrated Security=True;Encrypt=False";
 
-		public SqlConnection ObtenerConexion()
+        public SqlConnection ObtenerConexion()
 		{
 			SqlConnection sqlConnection = new SqlConnection(stringConexion);
 			try

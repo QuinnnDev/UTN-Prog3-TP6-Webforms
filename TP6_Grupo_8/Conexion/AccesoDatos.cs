@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
@@ -39,30 +40,18 @@ namespace TP6_Grupo_8
 			}
 		}
 
-        public int EjecutarProcAlmacenado(string nombreProcedimiento, List<SqlParameter> parametros)
+        public int EjecutarProcAlmacenado(SqlCommand comandoSQL, string nombreProcedimientoAlmacenado)
         {
-			SqlConnection conexion = ObtenerConexion();
-            try
-            {
-                SqlCommand comando = new SqlCommand(nombreProcedimiento, conexion);
-                comando.CommandType = System.Data.CommandType.StoredProcedure;
-
-                if (parametros != null)
-                {
-                    foreach (var parametro in parametros)
-                    {
-                        comando.Parameters.Add(parametro);
-                    }
-                }
-
-                int filasAfectadas = comando.ExecuteNonQuery();
-                return filasAfectadas;
-            }
-            catch (Exception ex)
-            {
-                return -1;
-            }
-
+			int filasModificadas;
+			SqlConnection sqlConnection = ObtenerConexion();
+			SqlCommand sqlCommand = new SqlCommand();
+            sqlCommand = comandoSQL;
+            sqlCommand.Connection = sqlConnection;
+            sqlCommand.CommandType = CommandType.StoredProcedure;
+            sqlCommand.CommandText = nombreProcedimientoAlmacenado;
+            filasModificadas = sqlCommand.ExecuteNonQuery();
+            sqlConnection.Close();
+            return filasModificadas;
         }
 
     }

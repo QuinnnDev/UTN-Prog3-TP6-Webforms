@@ -31,6 +31,11 @@ namespace TP6_Grupo_8.Conexion
             //constructor por defecto
         }
 
+        public Productos(int idProductos)
+        {
+            _idProductos = idProductos;
+        }
+
         public Productos(int idProductos, string nombreProducto, int idProvedor,
             int idCategoria, int cantidadPorUnidad, double precioUnidad, int unidadesEnExistencia,
             int unidadesEnPedido, int nivelNuevoPedido, bool suspendido)

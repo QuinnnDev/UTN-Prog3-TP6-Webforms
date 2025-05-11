@@ -32,22 +32,21 @@ namespace tp6intento2
 
         public void ArmarParametrosProductos(ref SqlCommand comando, Productos producto)
         {
-            comando.Parameters.Add(new SqlParameter("@IdProducto", SqlDbType.Int)
-            {
-                Value = producto.IdProducto
-            });
-            comando.Parameters.Add(new SqlParameter("@NombreProducto", SqlDbType.NVarChar, 50)
-            {
-                Value = producto.NombreProducto
-            });
-            comando.Parameters.Add(new SqlParameter("@CantidadPorUnidad", SqlDbType.NVarChar, 50)
-            {
-                Value = producto.CantidadPorUnidad
-            });
-            comando.Parameters.Add(new SqlParameter("@PrecioUnidad", SqlDbType.Money)
-            {
-                Value = Convert.ToDecimal(producto.PrecioUnidad)
-            });
+
+
+            SqlParameter sqlParametros = new SqlParameter();
+
+            sqlParametros = comando.Parameters.Add("@IdProducto", SqlDbType.Int);
+            sqlParametros.Value = producto.IdProducto;
+
+            sqlParametros = comando.Parameters.Add("@NombreProducto", SqlDbType.NVarChar, 50);
+            sqlParametros.Value = producto.NombreProducto;
+
+            sqlParametros = comando.Parameters.Add("@CantidadPorUnidad", SqlDbType.NVarChar, 50);
+            sqlParametros.Value = producto.CantidadPorUnidad;
+
+            sqlParametros = comando.Parameters.Add("@PrecioUnidad", SqlDbType.Money);
+            sqlParametros.Value = producto.PrecioUnidad;
         }
 
         public void ArmarParametrosEliminar(ref SqlCommand comando, Productos producto)
@@ -78,7 +77,7 @@ namespace tp6intento2
             SqlCommand sqlCommand = new SqlCommand();
             ArmarParametrosProductos(ref sqlCommand, producto);
             AccesoDatos accesoDatos = new AccesoDatos();
-            int FilasInsertadas = accesoDatos.EjecutarProcAlmacenado(sqlCommand, "spActualizarProducto");
+            int FilasInsertadas = accesoDatos.EjecutarProcAlmacenado(sqlCommand, "actualizarProducto");
             if (FilasInsertadas == 1)
             {
                 return true;

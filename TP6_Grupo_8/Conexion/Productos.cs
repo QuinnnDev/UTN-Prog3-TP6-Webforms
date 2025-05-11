@@ -11,8 +11,8 @@ namespace TP6_Grupo_8.Conexion
         private string _nombreProducto;
         private int _idProvedor;
         private int _idCategoria;
-        private int _cantidadPorUnidad;
-        private double _precioUnidad;
+        private string _cantidadPorUnidad;
+        private decimal _precioUnidad;
         private int _unidadesEnExistencia;
         private int _unidadesEnPedido;
         private int _nivelNuevoPedido;
@@ -22,8 +22,8 @@ namespace TP6_Grupo_8.Conexion
         // Getters y setters
         public int IdProducto { get => _idProductos; set => _idProductos = value; }
         public string NombreProducto { get => _nombreProducto; set => _nombreProducto = value; }
-        public int CantidadPorUnidad { get => _cantidadPorUnidad; set => _cantidadPorUnidad = value; }
-        public double PrecioUnidad { get => _precioUnidad; set => _precioUnidad = value; }
+        public string CantidadPorUnidad { get => _cantidadPorUnidad; set => _cantidadPorUnidad = value; }
+        public decimal PrecioUnidad { get => _precioUnidad; set => _precioUnidad = value; }
 
 
 
@@ -36,8 +36,16 @@ namespace TP6_Grupo_8.Conexion
             _idProductos = idProductos;
         }
 
+        public Productos (int idProductos, string nombreProducto, string cantidadPorUnidad, decimal precioUnidad)
+        {
+            _idProductos = idProductos;
+            _nombreProducto = nombreProducto;
+            _cantidadPorUnidad = cantidadPorUnidad;
+            _precioUnidad = precioUnidad;
+
+        }
         public Productos(int idProductos, string nombreProducto, int idProvedor,
-            int idCategoria, int cantidadPorUnidad, double precioUnidad, int unidadesEnExistencia,
+            int idCategoria, string cantidadPorUnidad, decimal precioUnidad, int unidadesEnExistencia,
             int unidadesEnPedido, int nivelNuevoPedido, bool suspendido)
         {
             _idProductos = idProductos;
@@ -52,7 +60,5 @@ namespace TP6_Grupo_8.Conexion
             _nivelNuevoPedido = nivelNuevoPedido;
             _suspedido = suspendido;
         }
-
-
     }
 }

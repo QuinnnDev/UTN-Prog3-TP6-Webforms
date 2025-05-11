@@ -72,5 +72,21 @@ namespace tp6intento2
                 return false;
             }
         }
+
+        public bool ActualizarProducto(Productos producto)
+        {
+            SqlCommand sqlCommand = new SqlCommand();
+            ArmarParametrosProductos(ref sqlCommand, producto);
+            AccesoDatos accesoDatos = new AccesoDatos();
+            int FilasInsertadas = accesoDatos.EjecutarProcAlmacenado(sqlCommand, "spActualizarProducto");
+            if (FilasInsertadas == 1)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }

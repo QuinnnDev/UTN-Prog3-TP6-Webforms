@@ -19,6 +19,14 @@ namespace TP6_Grupo_8.Conexion
         private bool _suspedido;
 
 
+        // Getters y setters
+        public int IdProducto { get => _idProductos; set => _idProductos = value; }
+        public string NombreProducto { get => _nombreProducto; set => _nombreProducto = value; }
+        public int CantidadPorUnidad { get => _cantidadPorUnidad; set => _cantidadPorUnidad = value; }
+        public double PrecioUnidad { get => _precioUnidad; set => _precioUnidad = value; }
+
+
+
         public Productos() {
             //constructor por defecto
         }

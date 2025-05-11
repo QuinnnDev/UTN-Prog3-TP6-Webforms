@@ -30,6 +30,32 @@ namespace tp6intento2
             return ObtenerTabla("Productos", "SELECT IdProducto, NombreProducto, CantidadPorUnidad, PrecioUnidad FROM Productos");
         }
 
-       
+        public void ArmarParametrosProductos(ref SqlCommand comando, Productos producto)
+        {
+            comando.Parameters.Add(new SqlParameter("@IdProducto", SqlDbType.Int)
+            {
+                Value = producto.IdProducto
+            });
+            comando.Parameters.Add(new SqlParameter("@NombreProducto", SqlDbType.NVarChar, 50)
+            {
+                Value = producto.NombreProducto
+            });
+            comando.Parameters.Add(new SqlParameter("@CantidadPorUnidad", SqlDbType.NVarChar, 50)
+            {
+                Value = producto.CantidadPorUnidad
+            });
+            comando.Parameters.Add(new SqlParameter("@PrecioUnidad", SqlDbType.Money)
+            {
+                Value = Convert.ToDecimal(producto.PrecioUnidad)
+            });
+        }
+
+        public void ArmarParametrosEliminar(ref SqlCommand comando, Productos producto)
+        {
+            comando.Parameters.Add(new SqlParameter("@IdProducto", SqlDbType.Int)
+            {
+                Value = producto.IdProducto
+            });
+        }
     }
 }

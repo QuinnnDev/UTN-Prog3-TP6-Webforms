@@ -63,7 +63,7 @@ namespace tp6intento2
             ArmarParametrosEliminar(ref sqlCommand, producto);
             AccesoDatos accesoDatos = new AccesoDatos();
             int filasModificadas = accesoDatos.EjecutarProcAlmacenado(sqlCommand, "EliminarProducto");
-            if (filasModificadas == 0)
+            if (filasModificadas == 1)
             {
                 return true;
             }

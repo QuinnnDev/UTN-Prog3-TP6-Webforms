@@ -57,5 +57,15 @@ namespace tp6intento2
                 Value = producto.IdProducto
             });
         }
+        public int EliminarProducto(Productos producto)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            SqlCommand comando = new SqlCommand();
+            ArmarParametrosEliminar(ref comando, producto);
+
+            List<SqlParameter> parametros = comando.Parameters.Cast<SqlParameter>().ToList();
+
+            return datos.EjecutarProcAlmacenado("EliminarProducto", parametros);
+        }
     }
 }

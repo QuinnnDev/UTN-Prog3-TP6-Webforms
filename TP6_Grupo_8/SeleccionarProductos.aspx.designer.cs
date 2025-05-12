@@ -7,11 +7,11 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace tp6intento2
+namespace TP6_Grupo_8
 {
 
 
-    public partial class SeleccionarP
+    public partial class SeleccionarProductos
     {
 
         /// <summary>

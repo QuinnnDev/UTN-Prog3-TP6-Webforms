@@ -1,4 +1,5 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="SeleccionarP.aspx.cs" Inherits="tp6intento2.SeleccionarP" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="SeleccionarProductos.aspx.cs" Inherits="TP6_Grupo_8.SeleccionarProductos" %>
+
 
 <!DOCTYPE html>
 
@@ -13,20 +14,37 @@
         .auto-style2 {
             width: 512px;
         }
+        .auto-style3 {
+            width: 512px;
+            height: 23px;
+        }
+        .auto-style4 {
+            height: 23px;
+        }
     </style>
 </head>
 <body>
     <form id="form1" runat="server">
         <div>
             <br />
-            <asp:GridView ID="GridView1" runat="server">
+            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False">
+                <Columns>
+                    <asp:TemplateField HeaderText="Id Producto">
+                    </asp:TemplateField>
+                    <asp:TemplateField HeaderText="Nombre Producto">
+                    </asp:TemplateField>
+                    <asp:TemplateField HeaderText="Id Proveedor">
+                    </asp:TemplateField>
+                    <asp:TemplateField HeaderText="Precio Unitario">
+                    </asp:TemplateField>
+                </Columns>
             </asp:GridView>
             <table class="auto-style1">
                 <tr>
-                    <td class="auto-style2">
+                    <td class="auto-style3">
                         <asp:HyperLink ID="inicio" runat="server" NavigateUrl="~/Ejercicio2.aspx">Volver al Inicio</asp:HyperLink>
                     </td>
-                    <td>
+                    <td class="auto-style4">
                         <asp:Label ID="addedprods" runat="server"></asp:Label>
                     </td>
                 </tr>

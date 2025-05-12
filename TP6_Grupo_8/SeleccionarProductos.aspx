@@ -27,15 +27,27 @@
     <form id="form1" runat="server">
         <div>
             <br />
-            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False">
+            <asp:GridView ID="gvProductos" runat="server" AutoGenerateColumns="False">
                 <Columns>
                     <asp:TemplateField HeaderText="Id Producto">
+                        <ItemTemplate>
+                            <asp:Label ID="lbl_ei_idProducto" runat="server" Text='<%# Bind("IdProducto") %>'></asp:Label>
+                        </ItemTemplate>
                     </asp:TemplateField>
                     <asp:TemplateField HeaderText="Nombre Producto">
+                        <ItemTemplate>
+                            <asp:Label ID="lbl_ei_NombreProducto" runat="server" Text='<%# Bind("NombreProducto") %>'></asp:Label>
+                        </ItemTemplate>
                     </asp:TemplateField>
                     <asp:TemplateField HeaderText="Id Proveedor">
+                        <ItemTemplate>
+                            <asp:Label ID="lbl_ei_IdProveedor" runat="server" Text='<%# Bind("IdProveedor") %>'></asp:Label>
+                        </ItemTemplate>
                     </asp:TemplateField>
                     <asp:TemplateField HeaderText="Precio Unitario">
+                        <ItemTemplate>
+                            <asp:Label ID="lbl_ei_PrecioUnidad" runat="server" Text='<%# Bind("PrecioUnidad") %>'></asp:Label>
+                        </ItemTemplate>
                     </asp:TemplateField>
                 </Columns>
             </asp:GridView>

@@ -27,7 +27,7 @@
     <form id="form1" runat="server">
         <div>
             <br />
-            <asp:GridView ID="gvProductos" runat="server" AutoGenerateColumns="False" AllowPaging="True">
+            <asp:GridView ID="gvProductos" runat="server" AutoGenerateColumns="False" AllowPaging="True" AutoGenerateSelectButton="True" OnSelectedIndexChanging="gvProductos_SelectedIndexChanging">
                 <Columns>
                     <asp:TemplateField HeaderText="Id Producto">
                         <ItemTemplate>
@@ -66,7 +66,7 @@
                 </tr>
             </table>
         </div>
-        <asp:Label ID="lblMensaje" runat="server"></asp:Label>
+        <asp:Label ID="lblProductoSeleccionado" runat="server"></asp:Label>
     </form>
 </body>
 </html>

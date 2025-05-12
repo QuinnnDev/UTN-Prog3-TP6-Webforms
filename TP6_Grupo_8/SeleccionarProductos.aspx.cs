@@ -24,5 +24,12 @@ namespace TP6_Grupo_8
             gvProductos.DataBind();
         }
 
+        protected void gvProductos_SelectedIndexChanging(object sender, GridViewSelectEventArgs e)
+        {
+            string IdProducto = ((Label)gvProductos.Rows[e.NewSelectedIndex].FindControl("lbl_it_idProducto")).Text;
+            string NombreProducto = ((Label)gvProductos.Rows[e.NewSelectedIndex].FindControl("lbl_it_NombreProducto")).Text;
+            string IdProveedor = ((Label)gvProductos.Rows[e.NewSelectedIndex].FindControl("lbl_it_IdProveedor")).Text;
+            string PrecioUnitario = ((Label)gvProductos.Rows[e.NewSelectedIndex].FindControl("lbl_it_PrecioUnidad")).Text;
+        }
     }
 }

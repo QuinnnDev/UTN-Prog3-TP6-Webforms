@@ -27,7 +27,7 @@
     <form id="form1" runat="server">
         <div>
             <br />
-            <asp:GridView ID="gvProductos" runat="server" AutoGenerateColumns="False">
+            <asp:GridView ID="gvProductos" runat="server" AutoGenerateColumns="False" AllowPaging="True">
                 <Columns>
                     <asp:TemplateField HeaderText="Id Producto">
                         <ItemTemplate>

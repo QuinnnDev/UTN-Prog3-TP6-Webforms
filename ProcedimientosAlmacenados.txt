@@ -1,0 +1,30 @@
+USE Neptuno
+GO
+
+
+CREATE PROCEDURE spActualizarProducto(
+@IDPRODUCTO INT,
+@NOMBREPRODUCTO NVARCHAR(40),
+@CANTIDADPORUNIDAD NVARCHAR(20),
+@PRECIOUNIDAD MONEY
+)
+AS
+UPDATE Productos
+SET
+NombreProducto = @NOMBREPRODUCTO,
+CantidadPorUnidad = @CANTIDADPORUNIDAD,
+PrecioUnidad = @PRECIOUNIDAD
+
+WHERE IdProducto = @IDPRODUCTO
+return
+GO
+
+CREATE PROCEDURE spEliminarProducto
+(
+@IdProducto INT
+) 
+AS
+DELETE FROM Productos
+WHERE IdProducto = @IdProducto
+RETURN
+GO

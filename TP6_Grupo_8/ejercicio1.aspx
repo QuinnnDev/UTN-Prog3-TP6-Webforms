@@ -80,7 +80,7 @@
                                         <asp:TextBox ID="txt_eit_cxunidad" runat="server" Text='<%# Bind("CantidadPorUnidad") %>'></asp:TextBox>
                                     </EditItemTemplate>
                                     <ItemTemplate>
-                                        <asp:Label ID="lbl_ei_PrecioUnidad" runat="server" Text='<%# Bind("CantidadPorUnidad") %>'></asp:Label>
+                                        <asp:Label ID="lbl_ei_cxUnidad" runat="server" Text='<%# Bind("CantidadPorUnidad") %>'></asp:Label>
                                     </ItemTemplate>
                                 </asp:TemplateField>
                                 <asp:TemplateField HeaderText="Precio Unidad">

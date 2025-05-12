@@ -61,7 +61,7 @@ namespace tp6intento2
             SqlCommand sqlCommand = new SqlCommand();
             ArmarParametrosEliminar(ref sqlCommand, producto);
             AccesoDatos accesoDatos = new AccesoDatos();
-            int filasModificadas = accesoDatos.EjecutarProcAlmacenado(sqlCommand, "EliminarProducto");
+            int filasModificadas = accesoDatos.EjecutarProcAlmacenado(sqlCommand, "spEliminarProducto");
             if (filasModificadas == 1)
             {
                 return true;
@@ -77,7 +77,7 @@ namespace tp6intento2
             SqlCommand sqlCommand = new SqlCommand();
             ArmarParametrosProductos(ref sqlCommand, producto);
             AccesoDatos accesoDatos = new AccesoDatos();
-            int FilasInsertadas = accesoDatos.EjecutarProcAlmacenado(sqlCommand, "actualizarProducto");
+            int FilasInsertadas = accesoDatos.EjecutarProcAlmacenado(sqlCommand, "spActualizarProducto");
             if (FilasInsertadas == 1)
             {
                 return true;

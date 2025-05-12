@@ -27,7 +27,7 @@ namespace tp6intento2
 
         public DataTable ObtenerTodosLosDatos ()
         {
-            return ObtenerTabla("Productos", "SELECT IdProducto, NombreProducto, CantidadPorUnidad, PrecioUnidad FROM Productos");
+            return ObtenerTabla("Productos", "SELECT IdProducto, NombreProducto, CantidadPorUnidad, PrecioUnidad, IdProveedor FROM Productos");
         }
 
         public void ArmarParametrosProductos(ref SqlCommand comando, Productos producto)

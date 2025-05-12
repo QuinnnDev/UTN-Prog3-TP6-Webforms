@@ -12,8 +12,17 @@ namespace TP6_Grupo_8
 	{
 		protected void Page_Load(object sender, EventArgs e)
 		{
-
-
+		  if(!Page.IsPostBack)
+			{
+				CargarGridView();
+			}
 		}
-	}
+        private void CargarGridView()
+        {
+            GestionProds gestionProds = new GestionProds();
+            gvProductos.DataSource = gestionProds.ObtenerTodosLosDatos();
+            gvProductos.DataBind();
+        }
+
+    }
 }

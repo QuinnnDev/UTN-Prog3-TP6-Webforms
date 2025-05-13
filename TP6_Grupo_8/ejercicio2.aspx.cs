@@ -11,7 +11,16 @@ namespace TP6_Grupo_8
 	{
 		protected void Page_Load(object sender, EventArgs e)
 		{
-
+            if (!IsPostBack)
+            {
+                lblMensaje.Text = "";
+            }
 		}
-	}
+
+        protected void btnEliminarSeleccionados_Click(object sender, EventArgs e)
+        {
+            Session["ProductosSeleccionados"] = null;
+            lblMensaje.Text = "¡Se eliminaron los productos seleccionados!";
+        }
+    }
 }

@@ -39,10 +39,10 @@ namespace tp6intento2
             sqlParametros = comando.Parameters.Add("@IdProducto", SqlDbType.Int);
             sqlParametros.Value = producto.IdProducto;
 
-            sqlParametros = comando.Parameters.Add("@NombreProducto", SqlDbType.NVarChar, 50);
+            sqlParametros = comando.Parameters.Add("@NombreProducto", SqlDbType.NVarChar, 40);
             sqlParametros.Value = producto.NombreProducto;
 
-            sqlParametros = comando.Parameters.Add("@CantidadPorUnidad", SqlDbType.NVarChar, 50);
+            sqlParametros = comando.Parameters.Add("@CantidadPorUnidad", SqlDbType.NVarChar, 20);
             sqlParametros.Value = producto.CantidadPorUnidad;
 
             sqlParametros = comando.Parameters.Add("@PrecioUnidad", SqlDbType.Money);

@@ -31,10 +31,10 @@ namespace TP6_Grupo_8
             {
                 GridViewRow fila = gvProductos.Rows[e.NewSelectedIndex];
 
-                string IdProducto = ((Label)gvProductos.Rows[e.NewSelectedIndex].FindControl("lbl_it_idProducto")).Text;
-                string NombreProducto = ((Label)gvProductos.Rows[e.NewSelectedIndex].FindControl("lbl_it_NombreProducto")).Text;
-                string IdProveedor = ((Label)gvProductos.Rows[e.NewSelectedIndex].FindControl("lbl_it_IdProveedor")).Text;
-                string PrecioUnitario = ((Label)gvProductos.Rows[e.NewSelectedIndex].FindControl("lbl_it_PrecioUnidad")).Text;
+                string IdProducto =     ((Label)gvProductos.Rows[e.NewSelectedIndex].FindControl("lbl_ei_idProducto")).Text;
+                string NombreProducto = ((Label)gvProductos.Rows[e.NewSelectedIndex].FindControl("lbl_ei_NombreProducto")).Text;
+                string IdProveedor =    ((Label)gvProductos.Rows[e.NewSelectedIndex].FindControl("lbl_ei_IdProveedor")).Text;
+                string PrecioUnitario = ((Label)gvProductos.Rows[e.NewSelectedIndex].FindControl("lbl_ei_PrecioUnidad")).Text;
 
 
                 DataTable tabla;
@@ -86,6 +86,12 @@ namespace TP6_Grupo_8
                 }
 
             }
+        }
+
+        protected void gvProductos_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            gvProductos.PageIndex = e.NewPageIndex;
+            CargarGridView();
         }
     }
 }

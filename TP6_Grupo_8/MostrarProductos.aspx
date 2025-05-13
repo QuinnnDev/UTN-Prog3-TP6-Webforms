@@ -10,6 +10,16 @@
         .auto-style1 {
             width: 100%;
         }
+        .auto-style2 {
+            width: 467px;
+        }
+        .auto-style3 {
+            height: 35px;
+        }
+        .auto-style4 {
+            width: 467px;
+            height: 35px;
+        }
     </style>
 </head>
 <body>
@@ -17,8 +27,18 @@
         <div>
             <table class="auto-style1">
                 <tr>
+                    <td class="auto-style3"></td>
+                    <td class="auto-style4">
+                        &nbsp;</td>
+                    <td class="auto-style3"></td>
+                    <td class="auto-style3"></td>
+                    <td class="auto-style3"></td>
+                    <td class="auto-style3"></td>
+                    <td class="auto-style3"></td>
+                </tr>
+                <tr>
                     <td>&nbsp;</td>
-                    <td>
+                    <td class="auto-style2">
                         <asp:Label ID="lblProdSeleccionados" runat="server" Font-Bold="True" Text="Productos seleccionados por el usuario:"></asp:Label>
                     </td>
                     <td>&nbsp;</td>
@@ -29,7 +49,8 @@
                 </tr>
                 <tr>
                     <td>&nbsp;</td>
-                    <td>&nbsp;</td>
+                    <td class="auto-style2">
+                        &nbsp;</td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
@@ -38,27 +59,27 @@
                 </tr>
                 <tr>
                     <td>&nbsp;</td>
-                    <td>
+                    <td class="auto-style2">
                         <asp:GridView ID="gvProductos" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#3366CC" BorderStyle="None" BorderWidth="1px" CellPadding="4" Height="134px" Width="427px">
                             <Columns>
                                 <asp:TemplateField HeaderText="IdProducto">
                                     <ItemTemplate>
-                                        <asp:Label ID="lbl_it_IdProducto" runat="server" Text='<%# Bind("IdProducto") %>'></asp:Label>
+                                        <asp:Label ID="lbl_it_IdProducto" runat="server" Text='<%# Bind("Id") %>'></asp:Label>
                                     </ItemTemplate>
                                 </asp:TemplateField>
                                 <asp:TemplateField HeaderText="Nombre Producto">
                                     <ItemTemplate>
-                                        <asp:Label ID="lbl_it_NombreProducto" runat="server" Text='<%# bind("NombreProducto") %>'></asp:Label>
+                                        <asp:Label ID="lbl_it_NombreProducto" runat="server" Text='<%# Bind("Nombre") %>'></asp:Label>
                                     </ItemTemplate>
                                 </asp:TemplateField>
                                 <asp:TemplateField HeaderText="Id Proveedor">
                                     <ItemTemplate>
-                                        <asp:Label ID="lbl_it_IdProveedor" runat="server" Text='<%# bind("IdProveedor") %>'></asp:Label>
+                                        <asp:Label ID="lbl_it_IdProveedor" runat="server" Text='<%# Bind("Proveedor") %>'></asp:Label>
                                     </ItemTemplate>
                                 </asp:TemplateField>
                                 <asp:TemplateField HeaderText="Precio Unitario">
                                     <ItemTemplate>
-                                        <asp:Label ID="lbl_it_PrecioUnidad" runat="server" Text='<%# bind("PrecioUnidad") %>'></asp:Label>
+                                        <asp:Label ID="lbl_it_PrecioUnidad" runat="server" Text='<%# Bind("Precio") %>'></asp:Label>
                                     </ItemTemplate>
                                 </asp:TemplateField>
                             </Columns>
@@ -72,6 +93,7 @@
                             <SortedDescendingCellStyle BackColor="#D6DFDF" />
                             <SortedDescendingHeaderStyle BackColor="#002876" />
                         </asp:GridView>
+                        <asp:Label ID="lblMensaje" runat="server" ForeColor="#CC3300"></asp:Label>
                     </td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
@@ -81,7 +103,8 @@
                 </tr>
                 <tr>
                     <td>&nbsp;</td>
-                    <td>&nbsp;</td>
+                    <td class="auto-style2">
+                        &nbsp;</td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
@@ -90,8 +113,8 @@
                 </tr>
                 <tr>
                     <td>&nbsp;</td>
-                    <td>
-                        <asp:HyperLink ID="hyplVolver" runat="server" NavigateUrl="~/paginaPrincipal.aspx">Volver al inicio</asp:HyperLink>
+                    <td class="auto-style2">
+                        <asp:HyperLink ID="hyplVolver" runat="server" NavigateUrl="~/ejercicio2.aspx">Volver al inicio</asp:HyperLink>
                     </td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
@@ -101,16 +124,7 @@
                 </tr>
                 <tr>
                     <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                </tr>
-                <tr>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
+                    <td class="auto-style2">&nbsp;</td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>

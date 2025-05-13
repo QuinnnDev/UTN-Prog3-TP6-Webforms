@@ -51,6 +51,15 @@ namespace TP6_Grupo_8
         protected global::System.Web.UI.WebControls.LinkButton btnEliminarSeleccionados;
 
         /// <summary>
+        /// Control lblMensaje.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblMensaje;
+
+        /// <summary>
         /// Control hlMostrarProductos.
         /// </summary>
         /// <remarks>
@@ -58,5 +67,14 @@ namespace TP6_Grupo_8
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HyperLink hlMostrarProductos;
+
+        /// <summary>
+        /// Control hyperlinkMenuPrincipal.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink hyperlinkMenuPrincipal;
     }
 }

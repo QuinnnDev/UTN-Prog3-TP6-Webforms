@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -15,15 +16,24 @@ namespace TP6_Grupo_8
         {
             if (Page.IsPostBack == false)
             {
-                cargarGridView();
+                cargarProductosSeleccionados();
             }
         }
 
-        private void cargarGridView()
+        private void cargarProductosSeleccionados()
         {
-            GestionProds gestionProductos = new GestionProds();
-            gvProductos.DataSource = gestionProductos.ObtenerTodosLosDatos();
-            gvProductos.DataBind();
+
+            if(Session["ProductosSeleccionados"] == null)
+            {
+                lblMensaje.Text = "No se selecciono ningun producto";
+            }
+            else
+            {
+                GestionProds gestionProductos = new GestionProds();
+                gvProductos.DataSource = (DataTable)Session["ProductosSeleccionados"];
+                gvProductos.DataBind();
+            }
+
         }
     }
 }

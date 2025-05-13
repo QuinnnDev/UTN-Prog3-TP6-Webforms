@@ -39,7 +39,7 @@
                 <tr>
                     <td>&nbsp;</td>
                     <td>
-                        <asp:GridView ID="gvProductos" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#3366CC" BorderStyle="None" BorderWidth="1px" CellPadding="4" Height="134px" Width="369px">
+                        <asp:GridView ID="gvProductos" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#3366CC" BorderStyle="None" BorderWidth="1px" CellPadding="4" Height="134px" Width="427px">
                             <Columns>
                                 <asp:TemplateField HeaderText="IdProducto">
                                     <ItemTemplate>
@@ -51,7 +51,7 @@
                                         <asp:Label ID="Label2" runat="server"></asp:Label>
                                     </ItemTemplate>
                                 </asp:TemplateField>
-                                <asp:TemplateField HeaderText="Cantidad">
+                                <asp:TemplateField HeaderText="Id Proveedor">
                                     <ItemTemplate>
                                         <asp:Label ID="Label3" runat="server"></asp:Label>
                                     </ItemTemplate>

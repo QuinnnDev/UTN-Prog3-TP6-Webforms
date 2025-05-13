@@ -27,7 +27,7 @@
     <form id="form1" runat="server">
         <div>
             <br />
-            <asp:GridView ID="gvProductos" runat="server" AutoGenerateColumns="False" AllowPaging="True" AutoGenerateSelectButton="True" OnSelectedIndexChanging="gvProductos_SelectedIndexChanging">
+            <asp:GridView ID="gvProductos" runat="server" AutoGenerateColumns="False" AllowPaging="True" AutoGenerateSelectButton="True" OnSelectedIndexChanging="gvProductos_SelectedIndexChanging" OnSelectedIndexChanged="gvProductos_SelectedIndexChanged">
                 <Columns>
                     <asp:TemplateField HeaderText="Id Producto">
                         <ItemTemplate>

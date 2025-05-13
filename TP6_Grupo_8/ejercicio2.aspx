@@ -21,7 +21,7 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <table class="auto-style1">
+            &nbsp;<table class="auto-style1">
                 <tr>
                     <td class="auto-style2">&nbsp;</td>
                     <td class="auto-style3">&nbsp;</td>
@@ -60,7 +60,7 @@
                     <td class="auto-style2">&nbsp;</td>
                     <td class="auto-style3">&nbsp;</td>
                     <td>
-                        <asp:HyperLink ID="hlMostrarProductos" runat="server" NavigateUrl="~/SeleccionarProductos.aspx">Mostrar Productos</asp:HyperLink>
+                        <asp:HyperLink ID="hlMostrarProductos" runat="server" NavigateUrl="~/MostrarProductos.aspx">Mostrar Productos</asp:HyperLink>
                     </td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>

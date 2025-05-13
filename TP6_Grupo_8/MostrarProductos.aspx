@@ -43,22 +43,22 @@
                             <Columns>
                                 <asp:TemplateField HeaderText="IdProducto">
                                     <ItemTemplate>
-                                        <asp:Label ID="Label1" runat="server"></asp:Label>
+                                        <asp:Label ID="lbl_it_IdProducto" runat="server" Text='<%# Bind("IdProducto") %>'></asp:Label>
                                     </ItemTemplate>
                                 </asp:TemplateField>
                                 <asp:TemplateField HeaderText="Nombre Producto">
                                     <ItemTemplate>
-                                        <asp:Label ID="Label2" runat="server"></asp:Label>
+                                        <asp:Label ID="lbl_it_NombreProducto" runat="server" Text='<%# bind("NombreProducto") %>'></asp:Label>
                                     </ItemTemplate>
                                 </asp:TemplateField>
                                 <asp:TemplateField HeaderText="Id Proveedor">
                                     <ItemTemplate>
-                                        <asp:Label ID="Label3" runat="server"></asp:Label>
+                                        <asp:Label ID="lbl_it_IdProveedor" runat="server" Text='<%# bind("IdProveedor") %>'></asp:Label>
                                     </ItemTemplate>
                                 </asp:TemplateField>
                                 <asp:TemplateField HeaderText="Precio Unitario">
                                     <ItemTemplate>
-                                        <asp:Label ID="Label4" runat="server"></asp:Label>
+                                        <asp:Label ID="lbl_it_PrecioUnidad" runat="server" Text='<%# bind("PrecioUnidad") %>'></asp:Label>
                                     </ItemTemplate>
                                 </asp:TemplateField>
                             </Columns>
